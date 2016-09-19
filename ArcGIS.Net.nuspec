@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>ArcGIS.Net</id>
+    <version>1.0.0</version>
+    <title>ArcGIS.Net</title>
+    <authors>Dave Timmins</authors>
+    <projectUrl>https://github.com/davetimmins/ArcGIS.PCL</projectUrl>
+    <licenseUrl>https://github.com/davetimmins/ArcGIS.PCL/blob/master/LICENSE.txt</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/davetimmins/ArcGIS.PCL/master/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      ArcGIS.PCL can be used to call ArcGIS Server resources, including those from Portal for ArcGIS and ArcGIS Online. The resources can be secure or unsecure and the ArcGIS Online token service and OAuth token service are supported.
+
+      Supports the following as typed operations:
+
+      > CheckGenerateToken - create a token automatically via an ITokenProvider
+      > Query&lt;T&gt; - query a layer by attribute and / or spatial filters
+      > QueryForCount - only return the number of results for the query operation
+      > QueryForIds - only return the ObjectIds for the results of the query operation
+      > Find - search across n layers and fields in a service
+      > ApplyEdits&lt;T&gt; - post adds, updates and deletes to a feature service layer
+      > Geocode - single line of input to perform a geocode using a custom locator or the Esri world locator
+      > Suggest - lightweight geocode operation that only returns text results, commonly used for predictive searching
+      > ReverseGeocode - find location candidates for an input point location
+      > Simplify&lt;T&gt; - alter geometries to be topologically consistent
+      > Project&lt;T&gt; - convert geometries to a different spatial reference
+      > Buffer&lt;T&gt; - buffers geometries by the distance requested
+      > DescribeSite - returns a url for every service discovered, for ArcGISOnline or Portal this returns the hosted feature services for a user
+      > Ping - verify that the server can be accessed
+      > Info - return the server information such as version and token authentication settings
+      > DescribeServices - return service information (name, sublayers etc.)
+      > DescribeLayer - return layer information
+
+      REST admin operations:
+
+      > PublicKey - admin operation to get public key used for encryption of token requests
+      > ServiceStatus - admin operation to get the configured and actual status of a service
+      > ServiceReport - admin operation to get the service report
+      > StartService - admin operation to start a service
+      > StopService - admin operation to stop a service
+
+      Also supports converting GeoJSON &lt;-&gt; ArcGIS Features.
+
+      Works with .NET for Windows Store apps, .NET framework 4.5, Windows Phone 8.1, Xamarin Android and Xamarin iOS. (PCL Profile 111)
+    </description>
+    <summary>
+      ArcGIS.PCL can be used to call ArcGIS Server resources, including those from Portal for ArcGIS and ArcGIS Online. The resources can be secure or unsecure and the ArcGIS Online token service and OAuth token service are supported.
+
+      Also supports converting GeoJSON &lt;-&gt; ArcGIS Features.
+
+      Works with .NET for Windows Store apps, .NET framework 4.5, Windows Phone 8.1, Xamarin Android and Xamarin iOS. (PCL Profile 111)
+    </summary>
+    <releaseNotes>
+      Added ObjectIdFieldName, GlobalIdFieldName and Geometrytype to QueryResponse
+    </releaseNotes>
+    <language />
+    <tags>ArcGIS ArcGISServer ArcGISOnline Esri REST PCL GIS GeoJSON Geo Json Mapping Map Location GeoLocation OAuth</tags>
+    <dependencies>
+      <group targetFramework="net45">
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="artifacts\build\lib\**\ArcGIS.Service*.dll" target="lib" />
+  </files>
+</package>

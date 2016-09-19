@@ -59,6 +59,7 @@ lib/
 artifacts/
 Backup/
 .fake/
+*.nupkg
 
 #nodejs
 node_modules/
@@ -78,3 +79,4 @@ ClientBin/
 
 
 git visual-studio-2012 ignore gitignore 
+

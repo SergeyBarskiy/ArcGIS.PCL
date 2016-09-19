@@ -117,6 +117,9 @@
 
         [DataMember(Name = "fields")]
         public IEnumerable<Field> Fields { get; set; }
+
+        [DataMember(Name = "advancedQueryCapabilities")]
+        public AdvancedQueryCapabilities AdvancedQueryCapabilities { get; set; }
     }
 
     [DataContract]
@@ -127,5 +130,33 @@
 
         [DataMember(Name = "name")]
         public string Name { get; set; }
+    }
+
+    [DataContract]
+    public class AdvancedQueryCapabilities
+    {
+        [DataMember(Name = "useStandardizedQueries")]
+        public bool UseStandardizedQueries { get; set; }
+
+        [DataMember(Name = "supportsStatistics")]
+        public bool SupportsStatistics { get; set; }
+
+        [DataMember(Name = "supportsOrderBy")]
+        public bool SupportsOrderBy { get; set; }
+
+        [DataMember(Name = "supportsDistinct")]
+        public bool SupportsDistinct { get; set; }
+
+        [DataMember(Name = "supportsPagination")]
+        public bool SupportsPagination { get; set; }
+
+        [DataMember(Name = "supportsTrueCurve")]
+        public bool SupportsTrueCurve { get; set; }
+
+        [DataMember(Name = "supportsReturningQueryExtent")]
+        public bool SupportsReturningQueryExtent { get; set; }
+
+        [DataMember(Name = "supportsQueryWithDistance")]
+        public bool SupportsQueryWithDistance { get; set; }
     }
 }
