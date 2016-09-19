@@ -4,9 +4,9 @@ using System.Reflection;
 [assembly: AssemblyCompanyAttribute("")]
 [assembly: AssemblyCopyrightAttribute("Copyright Dave Timmins (c) 2013")]
 [assembly: AssemblyProductAttribute("ArcGIS REST API ServiceModel PCL")]
-[assembly: AssemblyVersionAttribute("5.6.1")]
-[assembly: AssemblyFileVersionAttribute("5.6.1")]
-[assembly: AssemblyInformationalVersionAttribute("5.6.1")]
+[assembly: AssemblyVersionAttribute("5.6.2")]
+[assembly: AssemblyFileVersionAttribute("5.6.2")]
+[assembly: AssemblyInformationalVersionAttribute("5.6.2")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const string Version = "5.6.1";
