@@ -24,7 +24,7 @@
 
     [DataContract]
     public class ServiceLayerDescriptionResponse : PortalResponse
-    {       
+    {
         [DataMember(Name = "currentVersion")]
         public double CurrentVersion { get; set; }
 
@@ -106,6 +106,9 @@
         [DataMember(Name = "supportsAdvancedQueries")]
         public bool? SupportsAdvancedQueries { get; set; }
 
+        [DataMember(Name = "supportsValidateSQL")]
+        public bool? SupportsValidateSQL { get; set; }
+
         [DataMember(Name = "supportedQueryFormats")]
         public string SupportedQueryFormatsValue { get; set; }
 
@@ -120,6 +123,39 @@
 
         [DataMember(Name = "advancedQueryCapabilities")]
         public AdvancedQueryCapabilities AdvancedQueryCapabilities { get; set; }
+
+        [DataMember(Name = "useStandardizedQueries")]
+        public bool? UseStandardizedQueries { get; set; }
+
+        [DataMember(Name = "hasZ")]
+        public bool? HasZ { get; set; }
+
+        [DataMember(Name = "hasM")]
+        public bool? HasM { get; set; }
+
+        [DataMember(Name = "allowGeometryUpdates")]
+        public bool? AllowGeometryUpdates { get; set; }
+
+        [DataMember(Name = "supportsCalculate")]
+        public bool? SupportsCalculate { get; set; }
+
+        [DataMember(Name = "supportsAttachmentsByUploadId")]
+        public bool? SupportsAttachmentsByUploadId { get; set; }
+
+        [DataMember(Name = "supportsApplyEditsWithGlobalIds")]
+        public bool? SupportsApplyEditsWithGlobalIds { get; set; }
+
+        [DataMember(Name = "supportsRollbackOnFailures")]
+        public bool? SupportsRollbackOnFailures { get; set; }
+
+        [DataMember(Name = "objectIdField")]
+        public string ObjectIdField { get; set; }
+
+        [DataMember(Name = "globalIdField")]
+        public string GlobalIdField { get; set; }
+
+        [DataMember(Name = "typeIdField")]
+        public string TypeIdField { get; set; }
     }
 
     [DataContract]
@@ -135,9 +171,6 @@
     [DataContract]
     public class AdvancedQueryCapabilities
     {
-        [DataMember(Name = "useStandardizedQueries")]
-        public bool UseStandardizedQueries { get; set; }
-
         [DataMember(Name = "supportsStatistics")]
         public bool SupportsStatistics { get; set; }
 

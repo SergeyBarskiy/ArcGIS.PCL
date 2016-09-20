@@ -18,6 +18,7 @@ namespace ArcGIS.ServiceModel
                     httpClientHandler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
                 if (httpClientHandler.SupportsProxy) httpClientHandler.UseProxy = true;
                 if (httpClientHandler.SupportsRedirectConfiguration) httpClientHandler.AllowAutoRedirect = true;
+                httpClientHandler.PreAuthenticate = true;
 
                 var httpClient = new HttpClient(httpClientHandler);
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
